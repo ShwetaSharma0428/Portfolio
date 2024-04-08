@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
        <nav>
-        <label class="logo">Portfolio</label>
-        <ul>
+        <label class="logo">Portfo<span>lio</span></label>
+        <ul id="sidemenu">
             <li><a class="active" href="#home">Home</a></li>
             <li><a class="active" href="#aboutme">AboutMe</a></li>
             <li><a class="active" href="#experience">Experience</a></li>
@@ -18,7 +19,9 @@
             <li><a class="active" href="#achievements">Achievements</a></li>
             <li><a class="active" href="#projects">Projects</a></li>
             <li><a class="active" href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
         </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
        </nav>     
     </header>
 <section class="home" id="home">
@@ -32,15 +35,19 @@
         <span>101</span>
     </h1>
     <h3>Software Developer and Programming Enthusiast</h3>
-    <button class="btn" target="_blank">Download Resume</button>
+    <a href="https://www.geeksforgeeks.org/" class="btn" target="_blank">Download Resume</a>
+     
 </div>
 </section>
 <section class="aboutme" id="aboutme" >
-    <div class="aboutme-img">
-    <img src="/videos/aboutme_image.jpg">
+    <div class="container">
+      <div class="row">
+
+        <div class="about-img">
+    <img src="videos/image-aboutme2.jpg">
     </div>
     <div class="about-text">
-        <h2>About Me</h2>
+        <h1>About Me</h1>
         <h4>Hi, My name is Geek101 !!</h4>
         <p>I am a B.Tech Final Year Student of XYZ College, Pursuing My Degree in XYZ . I have a keen Interest in Problems Solving and Finding new and Dynamic Ideas.</p>
         <br>
@@ -59,8 +66,10 @@
                 <h5>4. Web Development</h5>
             </div>
         </div>
-        <button class="aboutme-btn">Contact Me</button>
+        <a href="#contact" class="aboutme-btn">Contact Me</a>
     </div>
+</div>
+</div>
 </section>
 <section class="experience" id="experience">
     <div class="experience-text">
@@ -146,7 +155,9 @@
         <h4>Some Of My Distinguished Works</h4>
         <div class="projects-content">
         <div class="row">
+            <a href="https://www.geeksforgeeks.org/library-management-system/" target="_blank">
             <img src="videos/project1-image.jpg">
+        </a>
             <div class="main-row">
              <div class="row-text">
                 <h6>Web App development</h6>
@@ -155,7 +166,9 @@
             <h3>Library Management System</h3>
         </div>
         <div class="row">
+            <a href="https://www.geeksforgeeks.org/forecast-weather-project-check-today-weather-for-any-location/" target="_blank">
             <img src="videos/project2-image.jpg">
+        </a>
             <div class="main-row">
              <div class="row-text">
                 <h6>Web App Development</h6>
@@ -165,7 +178,9 @@
         
         </div>
         <div class="row">
+            <a href="https://www.geeksforgeeks.org/dog-breed-classification-using-transfer-learning/" target="_blank">
             <img src="videos/project3-image.jpg">
+        </a>
             <div class="main-row">
              <div class="row-text">
                 <h6>Machine Learning</h6>
@@ -176,7 +191,9 @@
         </div>       
         </div>
         <div class="row">
+            <a href="https://www.geeksforgeeks.org/ml-boston-housing-kaggle-challenge-with-linear-regression/" target="_blank">
             <img src="videos/project4-image.jpg">
+        </a>
             <div class="main-row">
              <div class="row-text">
                 <h6>Machine Learning</h6>
@@ -225,7 +242,7 @@
             <li><a href="#">example@gmail.com</a></li>
             <li><a href="#">+91 0000000000</a></li>
             <a href="#">
-                <button class="contact-btn">Let's Chat</button>
+                <a href="#" class="contact-btn">Let's Chat</a>
             </a>
         </div>
         <div class="contact-icons">
@@ -233,7 +250,6 @@
                 <i class="boxes contactbox-linkedin">
                 
                 </i>
-                <i class="fa-brands fa-linkedin"></i>
             </a>
             <a href="#" target="_blank">
                 <i class="boxes contactbox-insta">
@@ -252,5 +268,14 @@
         </div>
     </div>
 </section>
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
 </body>
 </html>
